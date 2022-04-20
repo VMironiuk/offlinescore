@@ -6,10 +6,12 @@ type Squad interface {
 	getSquad() (offlinescore.Squad, error)
 }
 
-type Repository struct{
+type Repository struct {
 	Squad
 }
 
 func NewRepository() *Repository {
-	return &Repository{}
+	return &Repository{
+		Squad: NewSquadRepository(),
+	}
 }
