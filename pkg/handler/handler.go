@@ -9,6 +9,12 @@ func NewHandler() *Handler {
 }
 
 func (h *Handler) InitRoutes() *gin.Engine {
-	route := gin.New()
-	return route
+	router := gin.New()
+
+	squad := router.Group("/squad")
+	{
+		squad.GET("/", h.getSquad)
+	}
+
+	return router
 }
