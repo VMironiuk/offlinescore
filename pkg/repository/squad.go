@@ -9,9 +9,6 @@ func NewSquadRepository() *SquadRepository {
 }
 
 func (r *SquadRepository) GetSquad() (offlinescore.Squad, error) {
-	squad := offlinescore.Squad{
-		Id: "4009",
-	}
-
+	squad := makeSquad()
 	return squad, nil
 }
