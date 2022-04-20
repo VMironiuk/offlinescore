@@ -1,5 +1,12 @@
 package handler
 
-import "github.com/gin-gonic/gin"
+import (
+	"net/http"
 
-func (h *Handler) getSquad(ctx *gin.Context) {}
+	"github.com/gin-gonic/gin"
+)
+
+func (h *Handler) getSquad(ctx *gin.Context) {
+	squad, _ := h.service.GetSquad()
+	ctx.JSON(http.StatusOK, squad)
+}

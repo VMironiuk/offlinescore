@@ -5,10 +5,14 @@ import (
 
 	"github.com/VMironiuk/offlinescore"
 	"github.com/VMironiuk/offlinescore/pkg/handler"
+	"github.com/VMironiuk/offlinescore/pkg/repository"
+	"github.com/VMironiuk/offlinescore/pkg/service"
 )
 
 func main() {
-	handlers := handler.NewHandler()
+	repos := repository.NewRepository()
+	services := service.NewService(repos)
+	handlers := handler.NewHandler(services)
 	srv := new(offlinescore.Server)
 
 	if err := srv.Run("8000", handlers.InitRoutes()); err != nil {

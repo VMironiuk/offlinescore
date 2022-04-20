@@ -6,7 +6,7 @@ import (
 )
 
 type Squad interface {
-	getSquad() (offlinescore.Squad, error)
+	GetSquad() (offlinescore.Squad, error)
 }
 
 type Service struct {

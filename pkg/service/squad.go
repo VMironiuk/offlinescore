@@ -15,6 +15,6 @@ func NewSquadService(repo repository.Squad) *SquadService {
 	}
 }
 
-func (s *SquadService) getSquad() (offlinescore.Squad, error) {
-	return s.repo.getSquad()
+func (s *SquadService) GetSquad() (offlinescore.Squad, error) {
+	return s.repo.GetSquad()
 }

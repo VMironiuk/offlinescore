@@ -8,7 +8,7 @@ func NewSquadRepository() *SquadRepository {
 	return &SquadRepository{}
 }
 
-func (r *SquadRepository) getSquad() (offlinescore.Squad, error) {
+func (r *SquadRepository) GetSquad() (offlinescore.Squad, error) {
 	squad := offlinescore.Squad{
 		Id: "4009",
 	}
