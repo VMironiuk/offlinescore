@@ -9,16 +9,19 @@ type Squad struct {
 }
 
 type Player struct {
-	Id                  string `json:"Pid"`
-	FirstName           string `json:"Fn"`
-	LastName            string `json:"Ln"`
-	ShortName           string `json:"Shnm"`
-	CountryName         string `json:"CoNm"`
-	Residence           string `json:"Rcd"`
-	ShirtNumber         int    `json:"Snu,omitempty"`
-	AlternativePosition int    `json:"PosA"`
-	Position            int    `json:"Pos"`
-	ReasonType          int    `json:"Rt,omitempty"`
-	ReturnInfo          string `json:"RtonS,omitempty"`
-	ReasonInfo          string `json:"Rs,omitempty"`
+	Id             string `json:"Pid"`
+	FirstName      string `json:"Fn,omitempty"`
+	LastName       string `json:"Ln,omitempty"`
+	ShirtName      string `json:"Shnm,omitempty"`
+	ShortName      string `json:"Snm,omitempty"`
+	CountryName    string `json:"CoNm"`
+	RegionImage    string `json:"RegImg"`
+	ShirtNumber    int    `json:"Snu,omitempty"`
+	ActualPosition int    `json:"PosA"`
+	Position       int    `json:"Pos"`
+	ReasonType     int    `json:"Rt,omitempty"`
+	ReturnInfo     string `json:"RtonS,omitempty"`
+	ReasonInfo     string `json:"Rs,omitempty"`
+	ReturnDate     uint64 `json:"Rton,omitempty"`
+	PositionString string `json:"Pon,omitempty"`
 }
